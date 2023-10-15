@@ -2,9 +2,11 @@ echo "Shell Calistiriliyor..."
 
 echo "port yok ediliyor..."
 
-kill $(lsof -t -i:3000)
+cd ../$1
 
-git pull https://github.com/burakack/Drop-Note-Api.git master
+git pull origin master
+
+docker compose down
 
 docker compose build
 

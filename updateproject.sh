@@ -10,4 +10,4 @@ docker compose down
 
 docker compose build
 
-docker compose up && echo "Basarili"
+docker compose up -d && echo "Basarili"

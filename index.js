@@ -8,7 +8,7 @@ const server = http.createServer(app);
 
 app.route("/").post((req, res) => {
   const shell = require("shelljs");
-  shell.exec(`./updateproject.sh ${req.body.projectName}`);
+  shell.exec(`./updateproject.sh ${req.query.projectName}`);
   res.send({ msg: "GUNCELLENDİ" });
 });
 
